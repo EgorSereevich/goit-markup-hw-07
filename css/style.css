@@ -147,22 +147,33 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (max-width: 767px) {
-  .nav-menu-header {
-    display: flex;
-    flex-direction: column;
-    gap: 284px;
+.social_link_modal_menu {
+  margin-top: 48px;
+}
+@media screen and (max-width: 428px) {
+  .social-list.social-list-menu {
+    gap: 35px;
   }
-  .modal_nav_menu {
-    padding-top: 80px;
-    padding-left: 40px;
+}
+@media screen and (min-width: 428px) {
+  .social-list.social-list-menu {
+    gap: 56px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .menu_mobile {
+    padding: 80px 0 80px 40px;
   }
   .nav-link + .nav-link {
     margin-top: 40px;
   }
-  .contact_modal_menu {
-    padding-left: 40px;
+  .nav-menu-header {
+    display: flex;
+    flex-direction: column;
+
+    gap: 284px;
   }
+
   .tel_modal_menu {
     font-weight: 700;
     font-size: 36px;
@@ -170,7 +181,6 @@ img {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: #4d5ae5;
-    margin-bottom: 40px;
   }
   .mail_modal_menu {
     font-weight: 500;
@@ -182,18 +192,20 @@ img {
   .contacts-list {
     display: flex;
     flex-direction: column-reverse;
-    margin-bottom: 48px;
   }
 
-  .social-list.social-list-menu {
-    gap: 56px;
-    padding-left: 40px;
+  .mail_modal_menu_link {
+    margin-top: 30px;
   }
 }
+
 @media screen and (min-width: 768px) {
   .nav-link + .nav-link {
     margin-left: 40px;
     padding-bottom: 40px;
+  }
+  .social_link_modal_menu {
+    display: none;
   }
   .menu_button {
     display: none;
@@ -225,12 +237,20 @@ img {
   }
   .contacts-list {
     display: none;
+  }
+  .contact_modal_menu {
     margin-left: 118px;
   }
   .contacts-list + .contacts-list {
     margin-top: 8px;
   }
+  .nav-link + .nav-link {
+    margin-top: 6px;
+  }
 }
+/* .nav-link + .nav-link {
+  margin-top: 0;
+} */
 .nav-container {
   display: flex;
   align-items: baseline;
@@ -241,6 +261,7 @@ img {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .top-logo {
+  display: block;
   color: var(--primery-text-color);
   text-decoration: none;
   font-family: "Raleway", sans-serif;
@@ -457,6 +478,7 @@ img {
   }
   .preview-header {
     margin-bottom: 72px;
+    max-width: 320px;
   }
 }
 /* previev tabl */
@@ -470,7 +492,7 @@ img {
     font-size: 56px;
     line-height: 1.071;
     letter-spacing: 0.02em;
-    max-width: 498px;
+    width: 498px;
   }
   .peview-button {
     margin-top: 40px;
@@ -525,8 +547,9 @@ img {
 
   transform: scale(1);
 
-  width: 408px;
-  height: 584px;
+  max-width: 408px;
+
+  min-height: 584px;
   background: #fcfcfc;
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -610,17 +633,19 @@ img {
 
 .input-modal {
   margin-top: 4px;
-  width: 360px;
+  width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 38px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .textarea-form-modal {
   resize: none;
   display: block;
-  width: 360px;
+  width: 100%;
+
   height: 120px;
   font-size: 12px;
   line-height: 1.1666;
@@ -710,6 +735,8 @@ img {
   border-radius: 4px;
   border: transparent;
   fill: #404bbf;
+  display: block;
+  margin: 0 auto;
 
   font-weight: 500;
   font-size: 16px;
@@ -726,6 +753,10 @@ img {
 .button-modal:hover {
   background-color: #404bbf;
 }
+.check_button_modal {
+  display: block;
+}
+
 /* advantages */
 /* advantages mobile */
 .advantages .container {
@@ -887,8 +918,8 @@ img {
 /* team mobile */
 .team {
   background-color: var(--team-background-color);
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
   text-align: center;
 }
 
@@ -933,7 +964,9 @@ img {
 .card-text {
   padding: 32px 16px 32px 16px;
 }
-
+.card-text {
+  padding: 32px 14px 32px 14px;
+}
 .team-name {
   color: var(--primery-text-color);
   font-weight: 500;
@@ -965,6 +998,9 @@ img {
     width: 582px;
     margin: 0 auto;
   }
+  .card-text {
+    padding: 32px 16px 32px 16px;
+  }
   .team-flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -980,6 +1016,10 @@ img {
 @media screen and (min-width: 1200px) {
   .container-team {
     width: 1158px;
+  }
+  .team {
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
   .team-flex-container {
     flex-wrap: nowrap;
@@ -1321,7 +1361,6 @@ img {
   }
   .subscribe-text {
     text-align: left;
-    width: 40px;
   }
   .button-submit {
     margin-left: 24px;
