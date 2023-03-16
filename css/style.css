@@ -387,8 +387,10 @@ img {
 .contacts:focus {
   color: var(--hover-text-color);
 }
-.contact_modal_menu {
-  display: none;
+@media screen and (min-width: 767) {
+  .contact_modal_menu {
+    display: none;
+  }
 }
 .menu_mobile.is-open .contact_modal_menu {
   display: contents;
