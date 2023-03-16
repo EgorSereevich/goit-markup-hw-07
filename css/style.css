@@ -87,13 +87,7 @@ img {
 .menu_mobile.is-open {
   transform: translateY(0%);
 }
-.social-link_modal_menu {
-  display: none;
-}
-.menu_mobile.is-open .social-link_modal_menu {
-  display: contents;
-  justify-content: center;
-}
+
 .container-header {
   position: relative;
 }
@@ -147,9 +141,9 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.social_link_modal_menu {
+/* .social_link_modal_menu {
   margin-top: 48px;
-}
+} */
 @media screen and (max-width: 428px) {
   .social-list.social-list-menu {
     gap: 35px;
@@ -170,7 +164,7 @@ img {
   .nav-menu-header {
     display: flex;
     flex-direction: column;
-
+    margin-bottom: 48px;
     gap: 284px;
   }
 
@@ -204,9 +198,7 @@ img {
     margin-left: 40px;
     padding-bottom: 40px;
   }
-  .social_link_modal_menu {
-    display: none;
-  }
+
   .menu_button {
     display: none;
   }
@@ -215,6 +207,9 @@ img {
   }
   .button-close-menu {
     display: none;
+  }
+  .tel_modal_menu_link {
+    margin-top: 6px;
   }
 }
 
@@ -227,9 +222,6 @@ img {
   position: relative;
   margin: 0 auto;
 }
-.social-link_modal_menu {
-  display: none;
-}
 
 @media screen and (min-width: 768px) {
   .nav-list {
@@ -241,16 +233,8 @@ img {
   .contact_modal_menu {
     margin-left: 118px;
   }
-  .contacts-list + .contacts-list {
-    margin-top: 8px;
-  }
-  .nav-link + .nav-link {
-    margin-top: 6px;
-  }
 }
-/* .nav-link + .nav-link {
-  margin-top: 0;
-} */
+
 .nav-container {
   display: flex;
   align-items: baseline;
@@ -399,11 +383,19 @@ img {
   color: var(--hover-text-color);
 }
 
-/* */
-
 .contacts:hover,
 .contacts:focus {
   color: var(--hover-text-color);
+}
+
+.social_link_modal_menu {
+  display: none;
+}
+.menu_mobile.is-open .social_link_modal_menu {
+  display: contents;
+}
+.social_link_modal_menu .social-list-menu {
+  margin-top: 0px;
 }
 /* preview */
 /* preview mobile */
@@ -1064,11 +1056,7 @@ img {
 
 /* customers */
 /* customers mobail */
-/* .container-customers {
-  width: 428px;
-  margin: 0 auto;
-  padding: 96px 16px 96px 16px;
-} */
+
 .customers .container {
   margin: 0 auto;
 }
@@ -1216,7 +1204,6 @@ img {
 }
 @media screen and (min-width: 767px) {
   .social-list-conteiner {
-    /* margin-left: 120px; */
     padding: 0 120px;
   }
 }
