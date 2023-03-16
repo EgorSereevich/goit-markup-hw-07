@@ -387,6 +387,7 @@ img {
 .contacts:focus {
   color: var(--hover-text-color);
 }
+/*  */
 @media screen and (min-width: 767) {
   .contact_modal_menu {
     display: none;
