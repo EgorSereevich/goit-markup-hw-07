@@ -387,6 +387,12 @@ img {
 .contacts:focus {
   color: var(--hover-text-color);
 }
+.contact_modal_menu {
+  display: none;
+}
+.menu_mobile.is-open .contact_modal_menu {
+  display: contents;
+}
 
 .social_link_modal_menu {
   display: none;
